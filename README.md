@@ -13,8 +13,6 @@ davaisravnim
 
 	— НЕ ПИШЕМ И НЕ ВЫЗЫВАЕМ АНОНИМНЫХ ФУНКЦИЙ
 
-	— 
-
 	— ОПТИМИЗИРУЕМ КОД ДЛЯ ЧТЕНИЯ
 
 	— MODEL . VIEW . CONTROLLER
@@ -51,23 +49,23 @@ davaisravnim
 
 ———————————— 
 
-FRONT-END  ЗАДАЧИ:
+—FRONT-END  ЗАДАЧИ:
 
-— ИСПРАВИТЬ БАГИ
+	— ИСПРАВИТЬ БАГИ
 
-— RESPONSIVE => Bootstrap! 5 дней
+	— RESPONSIVE => Bootstrap! 5 дней
 
-— ASYNC FRAMEWORK => Knockout? Backbone? Ember? Angular?
+	— ASYNC FRAMEWORK => Knockout? Backbone? Ember? Angular?
  
 ————————————
 
-BACK-END ЗАДАЧИ:
+—BACK-END ЗАДАЧИ:
 
-— NGINX + COMPOSER + BOWER
+	— NGINX + COMPOSER + BOWER
 
-— FRAMEWORK => Yii? Laravel! Phantom?
+	— FRAMEWORK => Yii? Laravel! Phantom?
 
-— КЭШИРОВАНИЕ РАУТОВ => Redis! Memcache?
+	— КЭШИРОВАНИЕ РАУТОВ => Redis! Memcache?
 
-— АДМИНКА => Bitrix! Wordpress? Custom? October?
+	— АДМИНКА => Bitrix! Wordpress? Custom? October?
 
