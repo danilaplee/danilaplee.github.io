@@ -9,7 +9,7 @@ davaisravnim
 —СОБЛЮДАЕМ КОНВЕНЦИИ:
 
 	— ИСПОЛЬЗУЕМ COMMUNITY MANAGED КОД
-		=> Jquery, Bootstrap, Wordpress, Laravel, Angular
+		=> Jquery, Fontawesome, Bootstrap, Wordpress, Laravel, Angular
 
 	— НЕ ПИШЕМ И НЕ ВЫЗЫВАЕМ АНОНИМНЫХ ФУНКЦИЙ
 
