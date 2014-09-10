@@ -658,10 +658,10 @@ figure.time div:last-child::after {
 figure.time h4 {
 	padding-left: 20px;
 	color: #093c91;
-	font-size: 14px;
+	font-size: 17px;
 	font-family: 'ProximaNova-Semibold';
 }
-figure.time h4 > span {
+figure.time.pda h4 > i {
 	font-size: 17px;
 }
 figure.sms {
