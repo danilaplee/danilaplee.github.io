@@ -750,6 +750,7 @@ div.mobileTable i.fa.fa-rouble {
 	font-size: 16px;
 }
 figure div h4,
-figure div span {
+figure div span,
+figure section span {
 	font-family: 'ProximaNova-Semibold';
 }
