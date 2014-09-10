@@ -658,7 +658,7 @@ figure.time div:last-child::after {
 figure.time h4 {
 	padding-left: 20px;
 	color: #093c91;
-	font-size: 17px;
+	font-size: 15.5px;
 	font-family: 'ProximaNova-Semibold';
 }
 figure.time.pda h4 > i {
