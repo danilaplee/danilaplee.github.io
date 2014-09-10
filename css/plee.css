@@ -510,7 +510,7 @@ figure.partner p {
 	font-weight: bold;
 	margin-left: 5px;
 	margin-top: 3px;
-	letter-spacing: 0.7px;
+	letter-spacing: 0.4px;
 	line-height: 22px;
 	width:120px;
 }
@@ -749,8 +749,9 @@ div.mobileTable article:nth-child(odd) ul li {
 div.mobileTable i.fa.fa-rouble {
 	font-size: 16px;
 }
-figure div h4,
+figure.time div h4,
 figure div span,
 figure section span {
+	font-size: 16px;
 	font-family: 'ProximaNova-Semibold';
 }
