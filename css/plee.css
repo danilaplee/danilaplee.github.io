@@ -606,7 +606,6 @@ figure.sms section i {
 }
 figure.time div section span,
 figure.sms section span {
-	vertical-align: middle;
 	font-size: 19px;
 	line-height: 18px;
 }
