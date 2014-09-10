@@ -607,7 +607,7 @@ figure.sms section i {
 figure.time div section span,
 figure.sms section span {
 	vertical-align: middle;
-	font-size: 17px;
+	font-size: 16.6px;
 	line-height: 18px;
 }
 figure.time div section p,
@@ -752,6 +752,6 @@ div.mobileTable i.fa.fa-rouble {
 figure.time div section h4,
 figure div span,
 figure section span {
-	font-size: 16.7px;
+	font-size: 16.6px;
 	font-family: 'ProximaNova-Semibold';
 }
