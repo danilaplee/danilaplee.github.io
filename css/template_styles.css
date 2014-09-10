@@ -35,6 +35,12 @@
 }
 
 @font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/2A89D3_5_0.eot');
+    src: url('../fonts/2A89D3_5_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2A89D3_5_0.woff') format('woff'), url('../fonts/2A89D3_5_0.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'rouble';
     src: url('../fonts/rouble-webfont.eot');
     src: url('../fonts/rouble-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/rouble-webfont.woff') format('woff'), url('../fonts/rouble-webfont.ttf') format('truetype');
