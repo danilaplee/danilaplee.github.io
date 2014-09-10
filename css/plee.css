@@ -496,6 +496,7 @@ figure.partner {
 	margin: 50px auto;
 	font-family: 'Proxima Nova';
 }
+
 figure.partner h4 {
 	margin-left: 5px;
 	display: inline;
@@ -746,4 +747,7 @@ div.mobileTable article:nth-child(odd) ul li {
 }
 div.mobileTable i.fa.fa-rouble {
 	font-size: 16px;
+}
+h4 {
+	font-family: 'ProximaNova-Semibold';
 }
