@@ -749,6 +749,7 @@ div.mobileTable article:nth-child(odd) ul li {
 div.mobileTable i.fa.fa-rouble {
 	font-size: 16px;
 }
-h4 {
+figure div h4,
+figure div span {
 	font-family: 'ProximaNova-Semibold';
 }
