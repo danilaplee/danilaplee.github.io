@@ -11,7 +11,7 @@ var phone = [{
 	callPackage: '600',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
-	logoLink: 'http://0.0.0.0:8080/img/megafon.png'
+	logoLink: 'img/megafon.png'
 
 },{
 	id: '2',
@@ -25,7 +25,7 @@ var phone = [{
 	callPackage: '600',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
-	logoLink: 'http://0.0.0.0:8080/img/mts-logo.png'
+	logoLink: 'img/mts-logo.png'
 
 }]
 
@@ -41,7 +41,7 @@ var smart = [{
 	callPackage: '600',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
-	logoLink: 'http://0.0.0.0:8080/img/megafon.png'
+	logoLink: 'img/megafon.png'
 
 },{
 	id: '2',
@@ -55,7 +55,7 @@ var smart = [{
 	callPackage: '600',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
-	logoLink: 'http://0.0.0.0:8080/img/mts-logo.png'
+	logoLink: 'img/mts-logo.png'
 
 }]
 
@@ -71,7 +71,7 @@ var modem = [{
 	callPackage: '600',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
-	logoLink: 'http://0.0.0.0:8080/img/megafon.png'
+	logoLink: 'img/megafon.png'
 
 }, {
 	id: '2',
@@ -85,7 +85,7 @@ var modem = [{
 	callPackage: '600',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
-	logoLink: 'http://0.0.0.0:8080/img/megafon.png'
+	logoLink: 'img/megafon.png'
 
 }]
 
