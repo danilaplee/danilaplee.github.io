@@ -600,7 +600,6 @@ figure.sms section {
 }
 figure.time div section i,
 figure.sms section i {
-	vertical-align: middle;
 	font-size: 16px;
 	padding: 2px 3px;
 }
