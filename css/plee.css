@@ -658,8 +658,11 @@ figure.time div:last-child::after {
 figure.time h4 {
 	padding-left: 20px;
 	color: #093c91;
-	font-size: 16.6px;
+	font-size: 14px;
 	font-family: 'ProximaNova-Semibold';
+}
+figure.time h4 > span {
+	font-size: 17px;
 }
 figure.sms {
 	font-size: 12px;
@@ -750,6 +753,6 @@ div.mobileTable i.fa.fa-rouble {
 figure.time div section h4,
 figure div span,
 figure section span {
-	font-size: 18px;
+	font-size: 17px;
 	font-family: 'ProximaNova-Semibold';
 }
