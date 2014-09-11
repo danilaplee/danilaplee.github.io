@@ -229,6 +229,33 @@ nav.controlBox figure span {
 	transition: all 0.4s ease-in;
 
 }
+
+nav.controlBox figure div.btn-group {
+	padding-top: 5px;
+	background: 0;
+	border: 0;
+}
+nav.controlBox figure button {
+	width:280px;
+	background: #fff;
+	border: 2px solid #1e4d9a;
+	color: #1e4d9a;
+}
+nav.controlBox figure button:hover {
+	background: #fff;
+	border: 2px solid #1e4d9a;
+	margin: 0;
+	top: 0;
+	left: 0;
+	color: #1e4d9a !important;
+
+}
+nav.controlBox figure button span {
+	font-size: 4px;
+	padding: 0;
+	line-height: 0;
+	vertical-align: middle;
+}
 nav.controlBox figure.radioSelector.device span {
 	margin-top: 5px;
 }
@@ -248,11 +275,11 @@ nav.controlBox figure.radioSelector span:before {
 	font-family: 'FontAwesome';
 	cursor: pointer;
 }
-nav.controlBox figure.radioSelector .active + span:before {
+nav.controlBox figure.radioSelector a.ember-view.active > span:before {
 	content: '\f192';
 	color:#25a22f;
 } 
-nav.controlBox figure.radioSelector .active + span {
+nav.controlBox figure.radioSelector a.ember-view.active > span {
 	color:#25a22f;
 }
 nav.controlBox figure input {
@@ -339,7 +366,41 @@ nav.controlBox div {
 	border-top-right-radius: 5px;
 	background: #ff6300;
 }
-
+nav.controlBox figure a,
+nav.controlBox figure div ul a {
+	background: transparent;
+	width: auto;
+	padding: 5px 5px;
+}
+nav.controlBox div ul a.ember-view li {
+	background: #fff;
+	color: #000;
+	font-size: 13px;
+	padding: 10px 10px;
+	margin: 0;
+	letter-spacing: 0.3px;
+	display: block;
+	width: 200px;
+	text-align: left;
+	border: 0;
+	border-radius: 0;
+}
+nav.controlBox div ul a.ember-view:hover {
+	text-decoration: none;
+} 
+nav.controlBox div ul a.ember-view.active {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height: auto;
+	border: 0;
+	border-radius: 0;
+	text-align: left;
+}
+nav.controlBox div ul a.ember-view.active li {
+	background: 0;
+}
 div.mobileTable {
 	width: 990px;
 	left: 9px;

@@ -6,6 +6,8 @@ App.Router.map(function() {
   	this.resource('modem');
 });
 
+/////////PHONE///////////
+
 App.PhoneRoute = Ember.Route.extend({
 	model: function() {
 		return phone;
@@ -21,6 +23,24 @@ App.PhoneRoute = Ember.Route.extend({
     	});
 	}
 });
+
+App.PhoneController = Ember.ArrayController.extend({
+  queryParams: ['callTime','smsQuantity', 'network'],
+  callTime: null,
+
+  filteredArticles: function() {
+    var callTime = this.get('callTime');
+    var phoneArticles = this.get('phone');
+
+    if (callTime) {
+      return phoneArticles.filterBy('callPackage', callTime);
+    } else {
+      return phoneArticles;
+    }
+  }.property('callPackage', 'phoneArticles')
+});
+
+/////////SMART///////////
 
 App.SmartRoute = Ember.Route.extend({
 	model: function() {
@@ -38,6 +58,24 @@ App.SmartRoute = Ember.Route.extend({
 	}
 });
 
+App.SmartController = Ember.ArrayController.extend({
+  queryParams: ['callTime','internetQuantity', 'network'],
+  callTime: null,
+
+  filteredArticles: function() {
+    var callTime = this.get('callTime');
+    var phoneArticles = this.get('phone');
+
+    if (callTime) {
+      return phoneArticles.filterBy('callPackage', callTime);
+    } else {
+      return phoneArticles;
+    }
+  }.property('callPackage', 'phoneArticles')
+});
+
+/////////MODEM///////////
+
 App.ModemRoute = Ember.Route.extend({
 	model: function() {
 		return modem;
@@ -52,4 +90,20 @@ App.ModemRoute = Ember.Route.extend({
     	  outlet: 'main'
     	});
 	}
+});
+
+App.ModemController = Ember.ArrayController.extend({
+  queryParams: ['deviceType','internetQuantity'],
+  callTime: null,
+
+  filteredArticles: function() {
+    var callTime = this.get('callTime');
+    var phoneArticles = this.get('phone');
+
+    if (callTime) {
+      return phoneArticles.filterBy('callPackage', callTime);
+    } else {
+      return phoneArticles;
+    }
+  }.property('callPackage', 'phoneArticles')
 });

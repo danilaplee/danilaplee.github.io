@@ -12,7 +12,7 @@
 		<link href="css/plee.css" rel="stylesheet">
 		<script src="js/jquery-1.10.2.js"></script>
 		<script src="js/history.js"></script>
-		<script src="js/ember/handlebars-1.1.2.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
 		<script src="js/ember/showdown.js"></script>
 		<script src="js/ember/ember-1.7.0.js"></script>
 		<script src="js/ember/app.js"></script>
@@ -247,29 +247,52 @@
                     <p>Тарифы с оплатой за минуты и количество отправленных смс. Без интернета.</p>
                     <figure class="basicSelector">
                         <p>Куда вы звоните</p>
-                        <select name="" id="">
-                            <option value="">На мобильные и городские (Вне сети)</option>
-                            <option value="">На мобильные и городские (Вне сети)</option>
-                            <option value="">На мобильные и городские (Вне сети)</option>
-                        </select>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Выберите подходящие опции <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            {{#link-to 'phone' (query-params network='inside')}}
+                            <li>На мобильные и городские (Внутри сети)</li>
+                            {{/link-to}}
+                            {{#link-to 'phone' (query-params network='outside')}}
+                            <li>На мобильные и городские (Вне сети)</li>
+                            {{/link-to}}
+                            {{#link-to 'phone' (query-params network='roaming')}}
+                            <li>На мобильные и городские (В роуминге)</li>
+                            {{/link-to}}
+                          </ul>
+                        </div>
                     </figure>
                     <figure class="radioSelector">
                             <p>Продолжительность звонка (мин.)</p>
-                            <input type="radio" name="callTime" class="active" checked>
+                            {{#link-to 'phone' (query-params callTime='min')}}
+                            <input type="radio" name="callTime">
                             <span>Мало <br /> 1-5 мин.</span>
+                            {{/link-to}}
+                            {{#link-to 'phone' (query-params callTime="norm")}}
                             <input type="radio" name="callTime">
                             <span>Средне <br /> 5-10 мин.</span>
+                            {{/link-to}}
+                            {{#link-to 'phone' (query-params callTime='max')}}
                             <input type="radio" name="callTime">
                             <span>Много <br /> 10 мин. и более</span>
+                            {{/link-to}}
                     </figure>
                     <figure class="radioSelector">
                             <p>Количество СМС (в месяц)</p>
-                            <input type="radio" name="smsQuantity" class="active" checked>
+                            {{#link-to 'phone' (query-params smsQuantity='50')}}
+                            <input type="radio" name="smsQuantity">
                             <span>50</span>
+                            {{/link-to}}
+                            {{#link-to 'phone' (query-params smsQuantity='100')}}
                             <input type="radio" >
                             <span>100</span>
+                            {{/link-to}}
+                            {{#link-to 'phone' (query-params smsQuantity='200')}}
                             <input type="radio" >
                             <span>200</span>    
+                            {{/link-to}}
                     </figure>
         </article>
     </script>
@@ -278,28 +301,56 @@
                     <p>Тарифы с пакетами минут, смс и интернета. Оплачиваются раз в месяц.</p>
                     <figure class="basicSelector">
                         <p>Куда вы звоните</p>
-                        <select name="" id="">
-                            <option value="">На мобильные и городские <span>(Вне сети)</span></option>
-                            <option value="">На мобильные и городские <span>(Вне сети)</span></option>
-                            <option value="">На мобильные и городские <span>(Вне сети)</span></option>
-                        </select>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Выберите подходящие опции <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            {{#link-to 'smart' (query-params network='inside')}}
+                            <li>На мобильные и городские (Внутри сети)</li>
+                            {{/link-to}}
+                            {{#link-to 'smart' (query-params network='outside')}}
+                            <li>На мобильные и городские (Вне сети)</li>
+                            {{/link-to}}
+                            {{#link-to 'smart' (query-params network='roaming')}}
+                            <li>На мобильные и городские (В роуминге)</li>
+                            {{/link-to}}
+                          </ul>
+                        </div>
                     </figure>
                     <figure class="radioSelector">
                             <p>Продолжительность звонка (мин.)</p>
-                            <input type="radio" name="callTime" class="active" checked>
+                            {{#link-to 'smart' (query-params callTime='min')}}
+                            <input type="radio" name="callTime">
                             <span>Мало <br /> 1-5 мин.</span>
+                            {{/link-to}}
+                            {{#link-to 'smart' (query-params callTime="norm")}}
                             <input type="radio" name="callTime">
                             <span>Средне <br /> 5-10 мин.</span>
+                            {{/link-to}}
+                            {{#link-to 'smart' (query-params callTime='max')}}
                             <input type="radio" name="callTime">
                             <span>Много <br /> 10 мин. и более</span>
+                            {{/link-to}}
                     </figure>
                     <figure class="basicSelector">
-                            <p>Объём интернета</p>
-                            <select name="" id="" class="traffic">
-                                <option value="">0.5 ГБ <span>(почта и новости)</span></option>
-                                <option value="">1 ГБ</option>
-                                <option value="">2 ГБ</option>
-                            </select>
+                        <p>Обьем Интернета</p>
+                        <div class="btn-group" style="width:235px;">
+                          <button type="button" class="btn btn-default dropdown-toggle" style="width:235px;" data-toggle="dropdown">
+                            Выберите подходящие опции <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" style="width:235px;">
+                            {{#link-to 'smart' (query-params internetQuantity='0.5')}}
+                            <li>0.5 ГБ (почта и новости)</li>
+                            {{/link-to}}
+                            {{#link-to 'smart' (query-params internetQuantity='1')}}
+                            <li>1 ГБ</li>
+                            {{/link-to}}
+                            {{#link-to 'smart' (query-params internetQuantity='2')}}
+                            <li>2 ГБ</li>
+                            {{/link-to}}
+                          </ul>
+                        </div>
                     </figure>
         </article>
     </script>
@@ -308,18 +359,33 @@
                     <p>Тарифы для интернета. Не подходят для частых звонков и смс.</p>
                     <figure class="radioSelector device">
                             <p>Устройство</p>
-                            <input type="radio" name="callTime" class="active" checked>
+                            {{#link-to 'modem' (query-params deviceType='pda')}}
+                            <input type="radio" name="callTime">
                             <span>Планшет</span>
+                            {{/link-to}}
+                            {{#link-to 'modem' (query-params deviceType='stick')}}
                             <input type="radio" name="callTime">
                             <span>USB - модем</span>
+                            {{/link-to}}
                     </figure>
                     <figure class="basicSelector">
-                            <p>Объём интернета</p>
-                            <select name="" id="" class="traffic">
-                                <option value="">0.5 ГБ <span>(почта и новости)</span></option>
-                                <option value="">1 ГБ</option>
-                                <option value="">2 ГБ</option>
-                            </select>
+                        <p>Обьем Интернета</p>
+                        <div class="btn-group" style="width:235px;">
+                          <button type="button" class="btn btn-default dropdown-toggle" style="width:235px;" data-toggle="dropdown">
+                            Выберите подходящие опции <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" style="width:235px;">
+                            {{#link-to 'modem' (query-params internetQuantity='0.5')}}
+                            <li>0.5 ГБ (почта и новости)</li>
+                            {{/link-to}}
+                            {{#link-to 'modem' (query-params internetQuantity='1')}}
+                            <li>1 ГБ</li>
+                            {{/link-to}}
+                            {{#link-to 'modem' (query-params internetQuantity='2')}}
+                            <li>2 ГБ</li>
+                            {{/link-to}}
+                          </ul>
+                        </div>
                     </figure>
         </article>
     </script>
@@ -503,11 +569,11 @@
                                     Включено в плату
                                 </p>
                                 <h4>
-                                     600 мин
+                                     {{callPackage}} мин
                                 </h4>
                                 <section>
                                         <p>
-                                            Вызов на номера «Мегафона»
+                                            Вызов на номера «{{partner}}»
                                             всей России и все номера 
                                             Московского региона
                                         </p>
@@ -518,14 +584,14 @@
                                     Cверх платы
                                 </p>
                                 <section>
-                                        <span>0</span>
+                                        <span>{{callPriceInsideMoscowNetwork}}</span>
                                         <i class="fa fa-rouble"></i>
                                         <p>
-                                            На номера «Мегафона» Московского региона
+                                            На номера «{{parther}}» Московского региона
                                         </p>
                                 </section>
                                 <section>
-                                        <span>2</span>
+                                        <span>{{callPriceOutsideMoscowNetwork}}</span>
                                         <i class="fa fa-rouble"></i>
                                         <p>
                                             На другие номера Московского региона
@@ -545,7 +611,7 @@
                                     Включено в плату
                                 </p>
                                 <h4>
-                                     600 шт
+                                     {{smsPackage}} шт
                                 </h4>
                                 <section>
                                         <p>
@@ -558,7 +624,7 @@
                                     Cверх платы
                                 </p>
                                 <section>
-                                        <span>2,9</span>
+                                        <span>{{smsOverheadPrice}}</span>
                                         <i class="fa fa-rouble"></i>
                                         <p>
                                             SMS / MMS на все мобильные номера Московского региона
@@ -578,7 +644,7 @@
                                     Включено в плату
                                 </p>
                                 <h4>
-                                     3 ГБ
+                                     {{internetPackage}} ГБ
                                 </h4>
                                 <section>
                                         <p>
@@ -594,7 +660,7 @@
                                     Cверх платы
                                 </p>
                                     <h4>
-                                        <span>0</span>
+                                        <span>{{internetOverheadPrice}}</span>
                                         <i class="fa fa-rouble"></i>
                                     </h4>
                                 <section>
