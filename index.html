@@ -46,94 +46,109 @@
 	<h1>Coming Soon</h1>
 	<script src="js/d3.v3.min.js"></script>
 	<script src="js/topojson.v1.min.js"></script>
-	<script>
+<script>
 
-	var width = 480,
-	    height = 480,
-	    speed = -1e-2,
-	    start = Date.now(),
-	    canvasSection = d3.select("#canvasSection");
-	    console.log(canvasSection);
 
-	var sphere = {type: "Sphere"};
+var width = 480,
+    height = 250,
+    outerRadius = Math.min(width, height) * .5 - 10,
+    innerRadius = outerRadius * .6;
 
-	var projection = d3.geo.orthographic()
-	    .translate([width / 2, height / 2])
-	    .precision(.5);
+var n = 10,
+    data0 = d3.range(n).map(Math.random),
+    data1 = d3.range(n).map(Math.random),
+    data;
 
-	var graticule = d3.geo.graticule();
+var color = d3.scale.category20();
 
-	var canvas1 = d3.select("body > #canvasSection").append("canvas"),
-	    canvas2 = d3.select("body > #canvasSection").append("canvas").attr("class", "blur"),
-	    canvas3 = d3.select("body > #canvasSection").append("canvas");
-	    console.log(canvas1);
+var arc = d3.svg.arc();
 
-	d3.selectAll("canvas")
-	    .attr("width", width)
-	    .attr("height", height);
+var pie = d3.layout.pie()
+    .sort(null);
 
-	var context1 = canvas1.node().getContext("2d"),
-	    context2 = canvas2.node().getContext("2d"),
-	    context3 = canvas3.node().getContext("2d");
+var svg = d3.select("#canvasSection").append("svg")
+    .attr("width", width)
+    .attr("height", height);
 
-	var path = d3.geo.path()
-	    .projection(projection);
+svg.selectAll(".arc")
+    .data(arcs(data0, data1))
+  .enter().append("g")
+    .attr("class", "arc")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+  .append("path")
+    .attr("fill", function(d, i) { return color(i); })
+    .attr("d", arc);
 
-	projection.scale(width / 2.3).clipAngle(90);
+transition(1);
 
-	context1.beginPath();
-	path.context(context1)(sphere);
-	context1.lineWidth = 3;
-	context1.strokeStyle = "#000";
-	context1.stroke();
+function arcs(data0, data1) {
+  var arcs0 = pie(data0),
+      arcs1 = pie(data1),
+      i = -1,
+      arc;
+  while (++i < n) {
+    arc = arcs0[i];
+    arc.innerRadius = innerRadius;
+    arc.outerRadius = outerRadius;
+    arc.next = arcs1[i];
+  }
+  return arcs0;
+}
 
-	context1.beginPath();
-	path(sphere);
-	context1.fillStyle = "#fff";
-	context1.fill();
+function transition(state) {
+  var path = d3.selectAll(".arc > path")
+      .data(state ? arcs(data0, data1) : arcs(data1, data0));
 
-	context2.fillStyle = "rgba(0,0,0,.4)";
-	context3.strokeStyle = "rgba(0,0,0,.2)";
+  // Wedges split into two rings.
+  var t0 = path.transition()
+      .duration(1000)
+      .attrTween("d", tweenArc(function(d, i) {
+        return {
+          innerRadius: i & 1 ? innerRadius : (innerRadius + outerRadius) / 2,
+          outerRadius: i & 1 ? (innerRadius + outerRadius) / 2 : outerRadius
+        };
+      }));
 
-	d3.json("js/world-110m.json", function(error, topo) {
-	  var land = topojson.feature(topo, topo.objects.land),
-	      grid = graticule();
+  // Wedges translate to be centered on their final position.
+  var t1 = t0.transition()
+      .attrTween("d", tweenArc(function(d, i) {
+        var a0 = d.next.startAngle + d.next.endAngle,
+            a1 = d.startAngle - d.endAngle;
+        return {
+          startAngle: (a0 + a1) / 2,
+          endAngle: (a0 - a1) / 2
+        };
+      }));
 
-	  d3.timer(function() {
-	    context2.clearRect(0, 0, width, height);
-	    context3.clearRect(0, 0, width, height);
+  // Wedges then update their values, changing size.
+  var t2 = t1.transition()
+        .attrTween("d", tweenArc(function(d, i) {
+          return {
+            startAngle: d.next.startAngle,
+            endAngle: d.next.endAngle
+          };
+        }));
 
-	    projection.rotate([speed * (Date.now() - start), -15]);
+  // Wedges reunite into a single ring.
+  var t3 = t2.transition()
+      .attrTween("d", tweenArc(function(d, i) {
+        return {
+          innerRadius: innerRadius,
+          outerRadius: outerRadius
+        };
+      }));
 
-	    projection.scale(width / 2.3).clipAngle(90);
+  setTimeout(function() { transition(!state); }, 5000);
+}
 
-	    context2.beginPath();
-	    path.context(context2)(land);
-	    context2.fill();
+function tweenArc(b) {
+  return function(a, i) {
+    var d = b.call(this, a, i), i = d3.interpolate(a, d);
+    for (var k in d) a[k] = d[k]; // update data
+    return function(t) { return arc(i(t)); };
+  };
+}
 
-	    context3.beginPath();
-	    path.context(context3)(grid);
-	    context3.lineWidth = .5;
-	    context3.stroke();
-
-	    projection.scale(width / 2.2).clipAngle(106.3);
-
-	    context3.beginPath();
-	    path(land);
-	    context3.fillStyle = "#737368";
-	    context3.fill();
-
-	    projection.scale(width / 2.2).clipAngle(90);
-
-	    context3.beginPath();
-	    path(land);
-	    context3.fillStyle = "#dadac4";
-	    context3.fill();
-	  });
-	});
-
-	d3.select(self.frameElement).style("height", height + "px");
-
-	</script>
+</script>
 </body>
 </html>
