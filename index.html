@@ -49,9 +49,10 @@
 
 	var graticule = d3.geo.graticule();
 
-	var canvas1 = d3.select("#canvasSection").append("canvas"),
-	    canvas2 = d3.select("#canvasSection").append("canvas").attr("class", "blur"),
-	    canvas3 = d3.select("#canvasSection").append("canvas");
+	var canvas1 = d3.select("body > #canvasSection").append("canvas"),
+	    canvas2 = d3.select("body > #canvasSection").append("canvas").attr("class", "blur"),
+	    canvas3 = d3.select("body > #canvasSection").append("canvas");
+	    console.log(canvas1);
 
 	d3.selectAll("canvas")
 	    .attr("width", width)
