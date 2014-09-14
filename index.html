@@ -47,9 +47,9 @@ var projection = d3.geo.orthographic()
 
 var graticule = d3.geo.graticule();
 
-var canvas1 = d3.select(".canvasSection").append("canvas"),
-    canvas2 = d3.select(".canvasSection").append("canvas").attr("class", "blur"),
-    canvas3 = d3.select(".canvasSection").append("canvas");
+var canvas1 = d3.select("#canvasSection").append("canvas"),
+    canvas2 = d3.select("#canvasSection").append("canvas").attr("class", "blur"),
+    canvas3 = d3.select("#canvasSection").append("canvas");
 
 d3.selectAll("canvas")
     .attr("width", width)
@@ -118,7 +118,7 @@ d3.json("js/world-110m.json", function(error, topo) {
 d3.select(self.frameElement).style("height", height + "px");
 
 </script>
-<section class="canvasSection">
+<section id="canvasSection">
 </section>
 </body>
 </html>
