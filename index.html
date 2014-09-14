@@ -9,9 +9,10 @@
 	  background: #fcfcfa;
 	}
 
-	.canvasSection {
+	#canvasSection {
 		position: relative;
 		width:480px;
+		height: 480px;
 		margin:100px auto;
 	}
 	canvas {
@@ -34,8 +35,8 @@
 	<script src="js/topojson.v1.min.js"></script>
 	<script>
 
-	var width = 960,
-	    height = 960,
+	var width = 480,
+	    height = 480,
 	    speed = -1e-2,
 	    start = Date.now(),
 	    canvasSection = d3.select("#canvasSection");
