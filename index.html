@@ -66,7 +66,7 @@ context1.fill();
 context2.fillStyle = "rgba(0,0,0,.4)";
 context3.strokeStyle = "rgba(0,0,0,.2)";
 
-d3.json("/mbostock/raw/4090846/world-110m.json", function(error, topo) {
+d3.json("js/world-110m.json", function(error, topo) {
   var land = topojson.feature(topo, topo.objects.land),
       grid = graticule();
 
