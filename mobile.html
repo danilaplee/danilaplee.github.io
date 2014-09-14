@@ -203,7 +203,8 @@
     </div>
 	</header>
 	<script type="text/x-handlebars">
-	<section class="mobileSection"><div class="title compact">
+	<section class="mobileSection">
+    <div class="title compact">
 			<div class="wrapper">
 				<h1>
 					Сравнение мобильных тарифов
@@ -266,15 +267,15 @@
                     </figure>
                     <figure class="radioSelector">
                             <p>Продолжительность звонка (мин.)</p>
-                            {{#link-to 'phone' (query-params callTime='min')}}
+                            {{#link-to 'phone' (query-params callTime='1') action="sortPhone" }}
                             <input type="radio" name="callTime">
                             <span>Мало <br /> 1-5 мин.</span>
                             {{/link-to}}
-                            {{#link-to 'phone' (query-params callTime="norm")}}
+                            {{#link-to 'phone' (query-params callTime="5") action="sortPhone" }}
                             <input type="radio" name="callTime">
                             <span>Средне <br /> 5-10 мин.</span>
                             {{/link-to}}
-                            {{#link-to 'phone' (query-params callTime='max')}}
+                            {{#link-to 'phone' (query-params callTime='10') action="sortPhone" }}
                             <input type="radio" name="callTime">
                             <span>Много <br /> 10 мин. и более</span>
                             {{/link-to}}
@@ -320,15 +321,15 @@
                     </figure>
                     <figure class="radioSelector">
                             <p>Продолжительность звонка (мин.)</p>
-                            {{#link-to 'smart' (query-params callTime='min')}}
+                            {{#link-to 'smart' (query-params callTime='1')}}
                             <input type="radio" name="callTime">
                             <span>Мало <br /> 1-5 мин.</span>
                             {{/link-to}}
-                            {{#link-to 'smart' (query-params callTime="norm")}}
+                            {{#link-to 'smart' (query-params callTime="5")}}
                             <input type="radio" name="callTime">
                             <span>Средне <br /> 5-10 мин.</span>
                             {{/link-to}}
-                            {{#link-to 'smart' (query-params callTime='max')}}
+                            {{#link-to 'smart' (query-params callTime='10')}}
                             <input type="radio" name="callTime">
                             <span>Много <br /> 10 мин. и более</span>
                             {{/link-to}}
@@ -415,7 +416,7 @@
                 </ul>
             </header>
            
-            {{#each}}       
+            {{#each controller}}       
             <article>
                 <ul>
                     <li class="col-md-4">
@@ -487,14 +488,14 @@
                     <li class="col-md-3">
                         <figure class="sms">
                             <section>
-                                    <span>2</span>
+                                    <span>{{smsOverheadPrice}}</span>
                                     <i class="fa fa-rouble"></i>
                                     <p>
                                         Исходящие SMS абонентам мобильных операторов г.Москвы и Моск.обл.
                                     </p>
                             </section>
                             <section>
-                                    <span class="">3,8</span>
+                                    <span class="">{{smsOutsideNetworkPrice}}</span>
                                     <i class="fa fa-rouble"></i>
                                     <p class="">
                                         Исходящие SMS абонентам других регионов России

@@ -9,11 +9,14 @@ var phone = [{
 	callPriceOutsideNetwork: '15',
 	callPriceOutsideMoscowNetwork: '3',
 	callPackage: '600',
+	smsPackage: '30',
+	smsOverheadPrice: '0,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
 	logoLink: 'img/megafon.png'
 
-},{
+}, {
 	id: '2',
 	productName: 'Супер МТС',
 	partner: 'МТС',
@@ -23,11 +26,14 @@ var phone = [{
 	callPriceOutsideNetwork: '2',
 	callPriceOutsideMoscowNetwork: '22',
 	callPackage: '600',
+	smsPackage: '400',
+	smsOverheadPrice: '0,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
 	logoLink: 'img/mts-logo.png'
 
-},{
+}, {
 	id: '3',
 	productName: 'Супер МТС',
 	partner: 'МТС',
@@ -37,11 +43,14 @@ var phone = [{
 	callPriceOutsideNetwork: '2',
 	callPriceOutsideMoscowNetwork: '22',
 	callPackage: '600',
+	smsPackage: '120',
+	smsOverheadPrice: '0,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
 	logoLink: 'img/mts-logo.png'
 
-},{
+}, {
 	id: '4',
 	productName: 'Супер МТС',
 	partner: 'МТС',
@@ -51,6 +60,9 @@ var phone = [{
 	callPriceOutsideNetwork: '2',
 	callPriceOutsideMoscowNetwork: '22',
 	callPackage: '600',
+	smsPackage: '100',
+	smsOverheadPrice: '0,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
 	logoLink: 'img/mts-logo.png'
@@ -69,6 +81,7 @@ var smart = [{
 	callPackage: '600',
 	smsPackage: '400',
 	smsOverheadPrice: '0,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
 	logoLink: 'img/megafon.png'
@@ -85,6 +98,7 @@ var smart = [{
 	callPackage: '400',
 	smsPackage: '400',
 	smsOverheadPrice: '2,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '1,5',
 	internetOverheadPrice: '3',
 	logoLink: 'img/mts-logo.png'
@@ -101,6 +115,9 @@ var modem = [{
 	callPriceOutsideNetwork: '15',
 	callPriceOutsideMoscowNetwork: '3',
 	callPackage: '600',
+	smsPackage: '400',
+	smsOverheadPrice: '2,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
 	logoLink: 'img/megafon.png'
@@ -115,6 +132,9 @@ var modem = [{
 	callPriceOutsideNetwork: '15',
 	callPriceOutsideMoscowNetwork: '3',
 	callPackage: '600',
+	smsPackage: '400',
+	smsOverheadPrice: '2,9',
+	smsOutsideNetworkPrice: '1,9',
 	internetPackage: '3',
 	internetOverheadPrice: '0',
 	logoLink: 'img/megafon.png'

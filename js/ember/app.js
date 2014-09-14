@@ -9,9 +9,9 @@ App.Router.map(function() {
 /////////PHONE///////////
 
 App.PhoneRoute = Ember.Route.extend({
-	model: function() {
-		return phone;
-	},
+    model: function() {
+        return phone;
+    },
 	renderTemplate: function() {
     	this.render('phoneControls', {  
     	  into: 'application',                
@@ -19,25 +19,31 @@ App.PhoneRoute = Ember.Route.extend({
     	});
     	this.render('phone', {  
     	  into: 'application',                
-    	  outlet: 'main'
+    	  outlet: 'main',
+          controller: 'phone'
     	});
-	}
+	},
+    setupController: function(controller, phone) {
+      controller.set('model', phone);
+    }
 });
 
 App.PhoneController = Ember.ArrayController.extend({
-  queryParams: ['callTime','smsQuantity', 'network'],
-  callTime: null,
+    queryParams: ['callTime','smsQuantity', 'network'],
+    callTime: null,
+    smsQuantity: null,
+    network: null,
+    itemController: 'sorty'
+});
 
-  filteredArticles: function() {
-    var callTime = this.get('callTime');
-    var phoneArticles = this.get('phone');
-
-    if (callTime) {
-      return phoneArticles.filterBy('callPackage', callTime);
-    } else {
-      return phoneArticles;
-    }
-  }.property('callPackage', 'phoneArticles')
+App.SortyController = Ember.ObjectController.extend({
+    sortPhone: function(callTime, smsQuantity, network) {
+        var callTime = this.get('callTime');
+        var smsQuantity = this.get('smsQuantity');
+        var network = this.get('network');
+        var phone = this.get('model');
+        var sortedPhone = phone.smsPackage;
+    }.property('phone','callTime','smsQuantity','network')
 });
 
 /////////SMART///////////
