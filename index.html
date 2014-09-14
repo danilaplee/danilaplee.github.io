@@ -34,7 +34,8 @@ canvas {
 var width = 960,
     height = 960,
     speed = -1e-2,
-    start = Date.now();
+    start = Date.now(),
+    $figure = $('.figure');
 
 var sphere = {type: "Sphere"};
 
@@ -44,9 +45,9 @@ var projection = d3.geo.orthographic()
 
 var graticule = d3.geo.graticule();
 
-var canvas1 = d3.select("figure").append("canvas"),
-    canvas2 = d3.select("figure").append("canvas").attr("class", "blur"),
-    canvas3 = d3.select("figure").append("canvas");
+var canvas1 = d3.select($figure).append("canvas"),
+    canvas2 = d3.select($figure).append("canvas").attr("class", "blur"),
+    canvas3 = d3.select($figure).append("canvas");
 
 d3.selectAll("canvas")
     .attr("width", width)
