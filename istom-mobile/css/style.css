@@ -21,7 +21,7 @@ header {
 	float: left;
 	height: 50px;
 	padding: 15px 20px;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 20px;
 	font-family: 'Comfortaa';
 	opacity: 0.7;
@@ -81,7 +81,7 @@ h3 {
 	text-align: center;
 }
 h4 {
-	font-size: 24px;
+	font-size: 18px;
 	color: #fff;
 	font-family: Comfortaa;
 }
