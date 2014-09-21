@@ -2,7 +2,7 @@
 	box-sizing:border-box;
 	padding: 0;
 	margin: 0;
-	font-family: 'open sans';
+	font-family: 'Open Sans';
 }
 body {
 	height:100%;
@@ -23,7 +23,7 @@ header {
 	padding: 15px 20px;
 	font-size: 20px;
 	line-height: 20px;
-	font-family: comfortaa;
+	font-family: 'Comfortaa';
 	opacity: 0.7;
 }
 .nav>li {	
@@ -31,7 +31,7 @@ header {
 	display: block;
 	padding: 10px 20px;
 	font-size: 16px;
-	font-family: comfortaa;
+	font-family: Comfortaa;
 	cursor: pointer;
 }
 .nav>li:after {
@@ -83,7 +83,7 @@ h3 {
 h4 {
 	font-size: 24px;
 	color: #fff;
-	font-family: comfortaa;
+	font-family: Comfortaa;
 }
 h3 span {
 	color:#777;
