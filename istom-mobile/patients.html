@@ -5,10 +5,13 @@
 	  <input type="text" class="form-control" placeholder="Имя Пациента">
 	</div>
 	<br />
-	<p>Иван Семенов</p>
-	<p>Иван Иванов</p>
-	<p>Андрей Семенов</p>
-	<p>Дмитрий Семенов</p>
-	<p>Игнат Иванов</p>
-	<p>Виталий Семенов</p>
+	<p class="goToProfile">Иван Семенов</p>
+	<p class="goToProfile">Иван Иванов</p>
+	<p class="goToProfile">Андрей Семенов</p>
+	<p class="goToProfile">Дмитрий Семенов</p>
+	<p class="goToProfile">Игнат Иванов</p>
+	<p class="goToProfile">Виталий Семенов</p>
+	<script type="text/javascript">
+		$('.goToProfile').bind('click', loadProfile);
+	</script>
 </div>

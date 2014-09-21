@@ -4,7 +4,7 @@
 	<p>Пациент: Иван Иванов</p>
 	<p>Процедура: Чистка зубного камня</p>
 	<p>Телефон пациента: +79263194547</p>
-	<button class="btn btn-success">Карта Пациента</button>
+	<button class="btn btn-success goToProfile">Карта Пациента</button>
 	<br />
 	<button class="btn btn-danger">
 		Отменить
@@ -13,4 +13,7 @@
 	<button class="btn btn-primary">
 		Перенести
 	</button>
+		<script type="text/javascript">
+			$('.goToProfile').bind('click', loadProfile);
+		</script>
 </div>

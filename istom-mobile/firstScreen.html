@@ -4,13 +4,13 @@
 		<figure class="col-xs-4"><i class="fa fa-calendar"></i></figure>
 		<div class="col-xs-8" style="padding:0">
 					<p>На сегодня:</p>
-					<p><b>13:00<br /></b> Георгий Памятников</p>
-					<p><b>14:15<br /></b> Виталий Небосс</p>
-					<p><b>15:00<br /></b> Георгий Памятников</p>
-					<p><b>16:15<br /></b> Виталий Небосс</p>
-					<p><b>16:50<br /></b> Георгий Памятников</p>
-					<p><b>17:35<br /></b> Виталий Небосс</p>
-					<p><b>18:00<br /></b> Георгий Памятников</p>
+					<p class="goToMeeting"><b>13:00<br /></b> Георгий Памятников</p>
+					<p class="goToMeeting"><b>14:15<br /></b> Виталий Небосс</p>
+					<p class="goToMeeting"><b>15:00<br /></b> Георгий Памятников</p>
+					<p class="goToMeeting"><b>16:15<br /></b> Виталий Небосс</p>
+					<p class="goToMeeting"><b>16:50<br /></b> Георгий Памятников</p>
+					<p class="goToMeeting"><b>17:35<br /></b> Виталий Небосс</p>
+					<p class="goToMeeting"><b>18:00<br /></b> Георгий Памятников</p>
 		</div>
 	</article>
 	<article class="noScroll">
@@ -25,14 +25,16 @@
 	<figure class="col-xs-4"><i class="fa fa-file-o"></i></figure>
 	<div class="col-xs-8" style="padding:0">
 		<p>Новые карты пациентов:</p>
-		<p><b>Николай Староверов</b></p>
-		<p><b>Илья Анохин</b></p>
-		<p><b>Николай Староверов</b></p>
-		<p><b>Илья Анохин</b></p>
+		<p class="goToProfile"><b>Николай Староверов</b></p>
+		<p class="goToProfile"><b>Илья Анохин</b></p>
+		<p class="goToProfile"><b>Николай Староверов</b></p>
+		<p class="goToProfile"><b>Илья Анохин</b></p>
 	</div>
 	</article>
 	<script>
 		$('.fa-calendar').bind('click', loadSchedule);
 		$('.fa-file-o').bind('click', loadPatients);
+		$('.goToMeeting').bind('click', loadMeeting);
+		$('.goToProfile').bind('click', loadProfile);
 	</script>
 </div>
