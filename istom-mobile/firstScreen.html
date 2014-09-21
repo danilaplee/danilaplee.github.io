@@ -1,0 +1,38 @@
+<div class="firstContainer">
+	<h4 class="text-center">Сегодня 20-ое Сентября</h4>
+	<article class="calendar">
+		<figure class="col-xs-4"><i class="fa fa-calendar"></i></figure>
+		<div class="col-xs-8" style="padding:0">
+					<p>На сегодня назначено:</p>
+					<p><b>13:00:<br /> Георгий Памятников</b></p>
+					<p><b>14:15:<br /> Виталий Небосс</b></p>
+					<p><b>15:00:<br /> Георгий Памятников</b></p>
+					<p><b>16:15:<br /> Виталий Небосс</b></p>
+					<p><b>16:50:<br /> Георгий Памятников</b></p>
+					<p><b>17:35:<br /> Виталий Небосс</b></p>
+					<p><b>18:00:<br /> Георгий Памятников</b></p>
+		</div>
+	</article>
+	<article class="noScroll">
+		<figure class="col-xs-4"><i class="fa fa-comments"></i></figure>
+		<div class="col-xs-8">
+			<p class="messages">
+				У вас 2 Новых сообщения
+			</p>
+		</div>
+	</article>
+	<article>
+	<figure class="col-xs-4"><i class="fa fa-file-o"></i></figure>
+	<div class="col-xs-8" style="padding:0">
+		<p>Новые карты пациентов:</p>
+		<p><b>Николай Староверов</b></p>
+		<p><b>Илья Анохин</b></p>
+		<p><b>Николай Староверов</b></p>
+		<p><b>Илья Анохин</b></p>
+	</div>
+	</article>
+	<script>
+		$('.fa-calendar').bind('click', loadSchedule);
+		$('.fa-file-o').bind('click', loadPatients);
+	</script>
+</div>

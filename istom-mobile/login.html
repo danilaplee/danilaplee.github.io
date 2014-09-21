@@ -1,0 +1,53 @@
+	<div id="container">
+		<header>
+		</header>
+		<div class="mainContainer loginContainer">
+			<i class="fa fa-cloud logo">
+				<h3>i<span>Stom</span></h3>
+				<h4>Войти в систему</h4>
+			</i>
+			<!-- Single button -->
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				  Выберите клинику <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu clinicMenu" role="menu">
+				  <li><a href="#">Москва</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Клиника iStom</a></li>
+				  <li><a href="#">Альфа Дент</a></li>
+				  <li><a href="#">Медси</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Санкт Петербург</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Клиника iStom</a></li>
+				  <li><a href="#">Альфа Дент</a></li>
+				  <li><a href="#">Медси</a></li>
+				</ul>
+			  	<div class="input-group">
+				  <span class="input-group-addon">@</span>
+				  <input type="text" class="form-control" placeholder="Ваш Email">
+				</div>
+			  	<div class="input-group">
+				  <span class="input-group-addon">#</span>
+				  <input type="text" class="form-control" placeholder="Ваш Пароль">
+				</div>
+				<button type="button" class="btn btn-success loginButton">
+				  Войти
+				</button>
+			</div>
+		<footer>
+			
+		</footer>
+		<script type="text/javascript">
+			var loginButton = $('.loginButton'),
+				mainContainer = $('.mainContainer'),
+				header = $('header');
+			loginButton.bind('click', loadFirstScreen);
+			function loadFirstScreen() {
+				header.load('nav.html');
+				mainContainer.load('firstScreen.html');
+				mainContainer.removeClass('loginContainer');
+				}
+		</script>
+	</div>
