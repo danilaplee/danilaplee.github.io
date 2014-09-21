@@ -51,6 +51,7 @@ header {
 	margin-top: 0px;
 	top:0px;
 	padding: 100px 40px;
+	min-height: 700px;
 }
 
 .mainContainer {
@@ -202,7 +203,6 @@ h5 {
 	color: #ccc;
 	line-height: 100px;
 	display: inherit;
-	color: #fff;
 	cursor: pointer;
 }
 .schedule {
