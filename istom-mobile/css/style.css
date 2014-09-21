@@ -50,7 +50,7 @@ header {
 .mainContainer.loginContainer {
 	margin-top: 0px;
 	top:0px;
-	padding: 100px 40px;
+	padding: 20px 30px;
 	min-height: 700px;
 }
 
@@ -67,23 +67,23 @@ header {
 	margin-bottom: 0px;
 	padding: 0;
 	text-align: center;
-	font-size: 150px;
+	font-size: 250px;
 	width: 160px;
 	color: #fff;
-	opacity: 0.7;
+	opacity: 0.8;
 	width: 100%;
 }
 h3 {
-	margin-top: -85px;
-	margin-bottom: 50px;
+	margin-top: -135px;
+	margin-bottom: 100px;
 	color: deepskyblue;
 	opacity: 0.8;
-	font-size: 36px;
+	font-size: 48px;
 	text-align: center;
 	font-family: Comfortaa;
 }
 h4 {
-	font-size: 18px;
+	font-size: 24px;
 	color: #fff;
 	font-family: Comfortaa;
 }
@@ -104,6 +104,7 @@ h5 {
 }
 .firstContainer h4,
 .meetingContainer h4 {
+	font-size: 18px;
 	padding-top: 30px;
 	text-transform: uppercase;
 }
@@ -152,7 +153,8 @@ h5 {
 .firstContainer article p {
 	height: 120px;
 	padding-top: 5px;
-	font-size: 12px;
+	font-size: 16px;
+	font-weight: 100;
 	display: block;
 	color: #fff;
 	float:left;
@@ -167,18 +169,20 @@ h5 {
 .firstContainer article p:first-child {
 	font-size: 20px;
 	padding-top: 18px;
+	width:80%;
 	text-transform: uppercase;
 	border-bottom: 2px dashed #fff;
 }
 .firstContainer article p b {
 	display: block;
-	font-weight: 300;
+	font-weight: 500;
 	position: relative;
-	font-size: 14px;
+	font-size: 16px;
+	padding-top: 10px;
 }
 .firstContainer article p b:after {
 	content: ' ';
-	width: 100%;
+	width: 80%;
 	padding: 0px 0px;
 	background: #fff;
 	height: 1px;
@@ -200,7 +204,7 @@ h5 {
 .firstContainer figure i.fa {
 	font-size: 48px;
 	text-align: center;
-	color: #777;
+	color: #fff;
 	opacity: 0.8;
 	line-height: 100px;
 	display: inherit;
