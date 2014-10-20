@@ -1,0 +1,265 @@
+* {
+	box-sizing:border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans';
+}
+body {
+	height:100%;
+	width:100%;
+	position: absolute;
+	overflow: scroll;
+	min-height: 600px;
+}
+header {
+	top:0px;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+}
+.navbar-brand {
+	float: left;
+	height: 50px;
+	padding: 15px 20px;
+	font-size: 24px;
+	line-height: 20px;
+	font-family: 'Comfortaa';
+	opacity: 0.7;
+}
+.nav>li {	
+	position: relative;
+	display: block;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-family: Comfortaa;
+	cursor: pointer;
+}
+.nav>li:after {
+	content:' ';
+	width:80%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0 20px;
+	height:1px;
+	background-color: deepskyblue;
+}
+.navbar-default .navbar-brand {
+	color:  deepskyblue;
+}
+.mainContainer.loginContainer {
+	margin-top: 0px;
+	top:0px;
+	padding: 20px 30px;
+	min-height: 700px;
+}
+
+.mainContainer {
+	margin-top: -20px;
+	top: 50px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: deepskyblue;
+}
+.goToProfile,
+.goToMeeting {
+	cursor: pointer;
+}
+.logo {
+	margin-top:0px;
+	margin-bottom: 0px;
+	padding: 0;
+	text-align: center;
+	font-size: 250px;
+	width: 160px;
+	color: #fff;
+	opacity: 0.8;
+	width: 100%;
+}
+h3 {
+	margin-top: -135px;
+	margin-bottom: 100px;
+	color: deepskyblue;
+	opacity: 0.8;
+	font-size: 48px;
+	text-align: center;
+	font-family: Comfortaa;
+}
+h4 {
+	font-size: 24px;
+	color: #fff;
+	font-family: Comfortaa;
+}
+h3 span {
+	color:#777;
+	font-family: Comfortaa;
+}
+h5 {
+	text-align: center;
+	padding-top: 20px;
+	margin-bottom: 0px;
+	font-size: 16px;
+	margin-top: 20px;
+	color: #fff;
+	font-weight: 100;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+.firstContainer h4,
+.meetingContainer h4 {
+	font-size: 18px;
+	padding-top: 30px;
+	text-transform: uppercase;
+}
+.btn-group {
+	width:100%;
+	position: relative;
+}
+.btn-group .btn,
+.btn-group .input-group {
+	width:100%;
+	margin-bottom: 10px;
+}
+.dropdown-menu.clinicMenu {
+	top:20%;
+	cursor: pointer;
+}
+.open>.dropdown-menu {
+	width: 100%;
+}
+.firstContainer article {
+	width:90%;
+	height: auto;
+	padding: 20px 10px;
+	position: relative;
+	display: block;
+	margin:20px auto;
+	top:0px;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	padding-left: 0px;
+	overflow: scroll;
+}
+.firstContainer article.noScroll {
+	overflow: hidden;
+}
+.firstContainer article div {
+	padding: 0;
+}
+.firstContainer article figure {
+	display: block;
+	float:left;
+	width:30%;
+}
+.firstContainer article.calendar {
+}
+.firstContainer article p {
+	height: 120px;
+	padding-top: 5px;
+	font-size: 16px;
+	font-weight: 100;
+	display: block;
+	color: #fff;
+	float:left;
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+.firstContainer article.noScroll p:first-child {
+	border-bottom: 0;
+	margin-top: 10px;
+}
+.firstContainer article p:first-child {
+	font-size: 20px;
+	padding-top: 18px;
+	width:80%;
+	min-width: 145px;
+	text-transform: uppercase;
+	border-bottom: 2px dashed #fff;
+}
+.firstContainer article p b {
+	display: block;
+	font-weight: 500;
+	position: relative;
+	font-size: 16px;
+	padding-top: 10px;
+}
+.firstContainer article p b:after {
+	content: ' ';
+	width: 80%;
+	padding: 0px 0px;
+	background: #fff;
+	height: 1px;
+	left: 0px;
+	position: absolute;
+	bottom: 1px;
+	opacity: 0.6;
+}
+.firstContainer article p.messages {
+	font-size: 20px;
+	padding-top: 17px;
+}
+.firstContainer article p span {
+	font-weight: 100;
+	font-size: 14px;
+	display: block;
+	text-decoration: underline;
+}
+.firstContainer figure i.fa {
+	font-size: 48px;
+	text-align: center;
+	color: #fff;
+	opacity: 0.8;
+	line-height: 100px;
+	display: inherit;
+	cursor: pointer;
+}
+.schedule {
+	cursor: pointer;
+}
+.exit {
+	cursor: pointer;
+}
+.scheduleContainer {
+	width:100%;
+	margin-top: 20px;
+}
+.scheduleContainer th h4 {
+	opacity: 0.8;
+	background: transparent;
+}
+.scheduleContainer tr th {
+	cursor: pointer;
+}
+.scheduleContainer tr:nth-child(even) {
+	background: #fff;
+}
+.scheduleContainer tr:nth-child(odd) {
+	background: lightyellow;
+}
+.table>thead>tr>th:first-child,
+.table>tbody>tr>th:first-child {
+	padding-left: 20px;
+	cursor: inherit;
+}
+.scheduleContainer tr.transparent {
+	background: transparent;
+}
+.meetingContainer {
+	width: 100%;
+	min-height: 600px;
+	padding: 0px 20px;
+}
+.meetingContainer p {
+	color: #fff;
+}
+.meetingContainer .btn {
+	margin: 5px 0px;
+	width: 100%;
+}
+.patientList p {
+	font-size: 18px;
+	border-bottom: 1px dashed #ccc;
+	cursor:pointer;
+}
