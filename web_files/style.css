@@ -1,0 +1,39 @@
+.body
+{
+	overflow: hidden;
+}
+.info-block,
+.opacity-block
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 100%;
+	background: rgba(0,0,0,0.2);
+	z-index:-1;
+}
+.info-block
+{
+	background:transparent;
+	z-index:1;
+	height:80%;
+	top:-110%;
+}
+#logo
+{
+	margin:0 auto; 
+	margin-top:-20px; 
+	min-width:320px;
+	min-height:360px;
+}
+.column-container
+{
+	position: relative;
+	margin:0 auto;
+	width:100%;
+	max-width: 800px;
+	z-index: 1000;
+	opacity: 1;
+	overflow: scroll;
+}
