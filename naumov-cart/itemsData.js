@@ -1,0 +1,1 @@
+window.itemsData=[{name:"mega blue",id:"super1",price:1e3,img:"images/blue.png"},{name:"mega white",id:"super2",price:1e3,img:"images/basic.png"},{name:"mega lavender",id:"super3",price:1e3,img:"images/lavender.png"},{name:"mega pink",id:"super4",price:1e3,img:"images/pink.png"}];

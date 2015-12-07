@@ -1,0 +1,1 @@
+window.deliveryTypes=[{name:"DELIVERY"},{type:"fast",name:"Быстрая"},{type:"easy",name:"Легкая"},{type:"lightspeed",name:"Супер"}];

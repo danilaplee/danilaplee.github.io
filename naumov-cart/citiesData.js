@@ -1,0 +1,1 @@
+window.cartCities=[{name:"CITY"},{name:"oregon",easy:1e3,fast:2e3,lightspeed:3e3},{name:"moscow",easy:1e4,fast:2e4,lightspeed:3e4},{name:"santiago",easy:100,fast:200,lightspeed:300}];
