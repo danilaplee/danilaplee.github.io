@@ -1,6 +1,6 @@
 {
   "config":{
     "rpc_url":"https://www.exentriq.com/JSON-RPC",
-    "proxy_adress":"https://meet.exentriq.com:6002/image/"
+    "proxy_adress":"https://dev.i-stom.ru:6002/image/"
   }
 }
