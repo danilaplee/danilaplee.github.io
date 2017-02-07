@@ -1,5 +1,16 @@
-[
-  {
+{
+  "movies_a":[
+    {
+      "title":"Twelve Monkeys",
+      "genre":"Action",
+      "image":{
+        "thumbnail":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2Y2OWU4MWMtNmIyMy00YzMyLWI0Y2ItMTcyZDc3MTdmZDU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "original":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2Y2OWU4MWMtNmIyMy00YzMyLWI0Y2ItMTcyZDc3MTdmZDU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,671,1000_AL_.jpg"
+      },
+      "type":"Movie",
+      "year":"1995"
+    },
+    {
     "title":"Training Day",
     "genre":"Action",
     "image":{
@@ -8,5 +19,58 @@
     },
     "type":"Movie",
     "year":"2001"
-  }
-]
+    },
+    {
+      "title":"Resident Evil: The Final Chapter",
+      "genre":"Sci-Fi",
+      "image":{
+        "thumbnail":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2Y2OWU4MWMtNmIyMy00YzMyLWI0Y2ItMTcyZDc3MTdmZDU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "original":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2Y2OWU4MWMtNmIyMy00YzMyLWI0Y2ItMTcyZDc3MTdmZDU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,671,1000_AL_.jpg"
+      },
+      "type":"Movie",
+      "year":"2016"
+    },
+    {
+      "title":"Dragon Ball Z: Bojack Unbound",
+      "genre":"Cartoon",
+      "image":{
+        "thumbnail":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2NzA4NTQ2Ml5BMl5BanBnXkFtZTgwNjExNTIxMTE@._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "original":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2NzA4NTQ2Ml5BMl5BanBnXkFtZTgwNjExNTIxMTE@._V1_.jpg"
+      },
+      "type":"Movie",
+      "year":"1993"
+    }
+  ],
+  "movies_b":[
+    {
+      "title":"South Park: Bigger, Longer & Uncut",
+      "genre":"Cartoon",
+      "image":{
+        "thumbnail":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGE0ZWI0YzAtY2NkZi00YjkyLWIzYWEtNTJmMzJjODllNjdjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "original":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGE0ZWI0YzAtY2NkZi00YjkyLWIzYWEtNTJmMzJjODllNjdjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"
+      },
+      "type":"Movie",
+      "year":"1999"
+    },
+    {
+    "title":"Transformers: The Last Knight",
+    "genre":"Sci-Fi",
+    "image":{
+      "thumbnail":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM4NTE5OV5BMl5BanBnXkFtZTgwMTAwNDU4MDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "original":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM4NTE5OV5BMl5BanBnXkFtZTgwMTAwNDU4MDI@._V1_SY1000_CR0,0,640,1000_AL_.jpg"
+    },
+    "type":"Movie",
+    "year":"2017"
+    },
+    {
+      "title":"John Wick",
+      "genre":"Action",
+      "image":{
+        "thumbnail":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "original":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SY1000_CR0,0,666,1000_AL_.jpg"
+      },
+      "type":"Movie",
+      "year":"2014"
+    }
+  ]
+}
