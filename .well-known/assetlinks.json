@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "me.starpy.connect4",
+    "sha256_cert_fingerprints":
+    ["C8:0E:7D:AB:D0:F6:8F:59:1D:07:6F:43:21:4A:10:D2:36:D5:41:EF:3F:85:1F:E6:85:8D:E4:1A:B6:07:4E:F1"]
+  }
+}]
